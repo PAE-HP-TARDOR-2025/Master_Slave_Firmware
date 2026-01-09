@@ -1,0 +1,19 @@
+# SPDX-License-Identifier: MIT
+# Minimal sdkconfig for demoslave example (ESP32 target)
+
+CONFIG_IDF_TARGET="esp32"
+CONFIG_DEMO_SLAVE_NODE_ID=10
+CONFIG_DEMO_SLAVE_CAN_BITRATE_KBPS=1000
+CONFIG_DEMO_SLAVE_MAX_CHUNK_BYTES=2048
+CONFIG_DEMO_SLAVE_MAX_IMAGE_BYTES=524288
+
+# Reduce logging to speed up transfer
+CONFIG_LOG_DEFAULT_LEVEL_WARN=y
+CONFIG_BOOTLOADER_LOG_LEVEL_WARN=y
+
+# Use custom partition table with OTA support
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="../../partitions/slave_two_ota.csv"
+
+# Flash size 4MB to fit OTA partitions
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y

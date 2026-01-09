@@ -1,0 +1,93 @@
+menu "Demo master uploader settings"
+
+config DEMO_MASTER_FW_PATH
+    string "Firmware image path"
+    default "/spiffs/bye.bin"
+    help
+        Absolute path to the firmware binary that will be streamed to the slave.
+        Place the file on the mounted storage (for example SPIFFS or SD card)
+        before powering up the demo master.
+
+config DEMO_MASTER_NODE_ID
+    int "Target slave node identifier"
+    range 1 127
+    default 10
+    help
+        CANopen node identifier of the slave that should receive the firmware image.
+
+config DEMO_MASTER_TARGET_BANK
+    int "Target firmware bank"
+    range 0 255
+    default 1
+    help
+        Bank number passed along with the metadata so the slave knows where to store the new image.
+
+config DEMO_MASTER_CHUNK_BYTES
+    int "Chunk size in bytes"
+    range 32 1024
+    default 256
+    help
+        Number of bytes sent per transfer chunk. This must match the limit configured on the slave side.
+
+config DEMO_MASTER_NODE_ID_SELF
+    int "Master node identifier"
+    range 1 127
+    default 100
+    help
+        CANopen node identifier that this ESP32 master uses when talking on the bus.
+        Make sure it does not collide with any other masters on the network.
+
+config DEMO_MASTER_CAN_BITRATE_KBPS
+    int "TWAI bit rate (kbps)"
+    range 50 1000
+    default 500
+    help
+        Nominal CAN bus bit rate expressed in kilobits per second. The built-in
+        driver currently supports 125, 250, 500, or 1000 kbps. Any other value
+        will fall back to 500 kbps.
+
+config DEMO_MASTER_TWAI_TX_GPIO
+    int "TWAI TX GPIO"
+    range 0 48
+    default 5
+    help
+        GPIO number connected to the CAN transceiver TXD pin. The ESP32 drives
+        this signal out to the bus.
+
+config DEMO_MASTER_TWAI_RX_GPIO
+    int "TWAI RX GPIO"
+    range 0 48
+    default 4
+    help
+        GPIO number connected to the CAN transceiver RXD pin. The ESP32 samples
+        this signal coming from the bus.
+
+config DEMO_MASTER_USE_SPIFFS
+    bool "Mount SPIFFS at boot"
+    default y
+    help
+        Automatically mount a SPI flash file system before the upload demo runs. Disable if you
+        plan to source the firmware from another file system.
+
+config DEMO_MASTER_SPIFFS_BASE_PATH
+    string "SPIFFS mount path"
+    depends on DEMO_MASTER_USE_SPIFFS
+    default "/spiffs"
+    help
+        Base path where the SPI flash file system will be mounted.
+
+config DEMO_MASTER_SPIFFS_PARTITION_LABEL
+    string "SPIFFS partition label"
+    depends on DEMO_MASTER_USE_SPIFFS
+    default "storage"
+    help
+        Partition label declared in the partition table that stores the SPI flash file system.
+
+config DEMO_MASTER_SPIFFS_FORMAT_IF_NEEDED
+    bool "Format SPIFFS if mounting fails"
+    depends on DEMO_MASTER_USE_SPIFFS
+    default y
+    help
+        Reformat the SPI flash partition automatically when mounting fails.
+
+endmenu

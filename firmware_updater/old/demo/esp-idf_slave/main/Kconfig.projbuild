@@ -1,0 +1,12 @@
+menu "Firmware updater demo"
+
+config SLAVE_GREETING
+    string "Default slave greeting"
+    default "Hello from slave"
+    help
+        Text printed by dummy_slave_main every second. You can override this
+        option via menuconfig, a -DSLAVE_GREETING_OVERRIDE CMake definition,
+        or by exporting SLAVE_GREETING_OVERRIDE in the environment before
+        invoking idf.py.
+
+endmenu

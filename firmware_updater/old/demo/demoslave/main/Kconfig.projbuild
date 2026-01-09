@@ -1,0 +1,56 @@
+menu "Dummy slave demo"
+
+config SLAVE_GREETING
+    string "Default slave greeting"
+    default "Hello from slave"
+    help
+        Text printed by dummy_slave_main every second. You can override this
+        option via menuconfig, a -DSLAVE_GREETING_OVERRIDE CMake definition,
+        or by exporting SLAVE_GREETING_OVERRIDE in the environment before
+        invoking idf.py.
+
+config DEMO_SLAVE_NODE_ID
+    int "Slave node identifier"
+    range 1 127
+    default 10
+    help
+        CANopen node ID used when announcing this slave on the bus.
+
+config DEMO_SLAVE_CAN_BITRATE_KBPS
+    int "TWAI bit rate (kbps)"
+    range 50 1000
+    default 500
+    help
+        Nominal CAN bus bit rate expressed in kilobits per second.
+
+config DEMO_SLAVE_TWAI_TX_GPIO
+    int "TWAI TX GPIO"
+    range 0 48
+    default 5
+    help
+        GPIO number wired to the CAN transceiver TXD pin.
+
+config DEMO_SLAVE_TWAI_RX_GPIO
+    int "TWAI RX GPIO"
+    range 0 48
+    default 4
+    help
+        GPIO number wired to the CAN transceiver RXD pin.
+
+config DEMO_SLAVE_MAX_CHUNK_BYTES
+    int "Maximum accepted chunk size"
+    range 32 1024
+    default 256
+    help
+        Largest firmware data block (in bytes) that the slave accepts in
+        object 0x1F50. The master must stay at or below this limit.
+
+config DEMO_SLAVE_MAX_IMAGE_BYTES
+    int "Maximum firmware image size"
+    range 65536 2097152
+    default 524288
+    help
+        Upper bound for metadata validation. Images larger than this many
+        bytes are rejected before any data is transferred.
+
+endmenu

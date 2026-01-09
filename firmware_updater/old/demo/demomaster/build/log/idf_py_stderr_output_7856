@@ -1,0 +1,2 @@
+C:\Users\guill\AppData\Local\Temp\confgen_tmpyznapu_3:71: warning: malformed string literal in assignment to SOC_BROWNOUT_RESET_SUPPORTED (defined at C:/Espressif/frameworks/esp-idf-v5.0.1\./components/soc/esp32/include/soc/Kconfig.soc_caps.in:6). Assignment ignored.
+C:\Users\guill\AppData\Local\Temp\confgen_tmpyznapu_3:214: warning: '1' is not a valid value for the bool symbol SOC_EFUSE_SECURE_BOOT_KEY_DIGESTS (defined at C:/Espressif/frameworks/esp-idf-v5.0.1\./components/soc/esp32/include/soc/Kconfig.soc_caps.in:674). Assignment ignored.

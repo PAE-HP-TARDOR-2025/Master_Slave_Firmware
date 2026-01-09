@@ -1,0 +1,100 @@
+menu "Master Uploader Configuration"
+
+    config MASTER_NODE_ID
+        int "CANopen node ID for master"
+        default 1
+        range 1 127
+        help
+            The CANopen node ID for this master device.
+
+    config MASTER_TARGET_NODE_ID
+        int "Target slave node ID (first slave)"
+        default 10
+        range 1 127
+        help
+            The CANopen node ID of the first slave to upload firmware to.
+            Additional slaves follow consecutively (10, 11, 12, ...).
+
+    config MASTER_NUM_SLAVES
+        int "Number of slaves to update"
+        default 1
+        range 1 8
+        help
+            Number of slaves to update in parallel.
+            Slaves are at node IDs: TARGET_NODE_ID, TARGET_NODE_ID+1, ...
+            Maximum 8 slaves due to SDO client memory constraints.
+
+    config MASTER_CAN_BITRATE_KBPS
+        int "CAN bitrate (kbps)"
+        default 500
+        range 125 1000
+        help
+            CAN bus bitrate in kbps. Common values: 125, 250, 500, 1000.
+            Must match the slave's bitrate.
+
+    config MASTER_TWAI_TX_GPIO
+        int "TWAI TX GPIO"
+        default 5
+        help
+            GPIO pin for TWAI (CAN) transmit.
+
+    config MASTER_TWAI_RX_GPIO
+        int "TWAI RX GPIO"
+        default 4
+        help
+            GPIO pin for TWAI (CAN) receive.
+
+    config MASTER_USE_SPIFFS
+        bool "Use SPIFFS for firmware storage"
+        default y
+        help
+            Mount SPIFFS partition for storing firmware binaries.
+
+    config MASTER_SPIFFS_BASE_PATH
+        string "SPIFFS mount path"
+        default "/spiffs"
+        depends on MASTER_USE_SPIFFS
+        help
+            Base path where SPIFFS is mounted.
+
+    config MASTER_SPIFFS_PARTITION_LABEL
+        string "SPIFFS partition label"
+        default "storage"
+        depends on MASTER_USE_SPIFFS
+        help
+            Partition label for SPIFFS.
+
+    config MASTER_FIRMWARE_PATH
+        string "Firmware file path"
+        default "/spiffs/slave_fw.bin"
+        help
+            Path to the firmware binary to upload.
+
+    config MASTER_MAX_CHUNK_BYTES
+        int "Maximum chunk size"
+        default 256
+        range 64 1024
+        help
+            Maximum bytes per SDO block transfer chunk.
+
+    config MASTER_UPLOAD_ON_STARTUP
+        bool "Upload firmware on startup"
+        default y
+        help
+            Automatically start firmware upload when master boots.
+
+    config MASTER_SKIP_IF_CRC_MATCH
+        bool "Skip upload if CRC matches"
+        default y
+        help
+            Query slave's running firmware CRC first and skip upload if it matches.
+
+    config MASTER_FIRMWARE_VERSION
+        int "Firmware version to send"
+        default 1
+        range 1 65535
+        help
+            Firmware version number (1-65535) to send in metadata.
+            Must match the version in the slave firmware being uploaded.
+
+endmenu

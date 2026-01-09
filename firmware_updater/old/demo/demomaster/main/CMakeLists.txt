@@ -1,0 +1,14 @@
+idf_component_register(
+    SRCS
+        "demo_master_app.c"
+        "master_uploader_demo.c"
+    PRIV_REQUIRES
+        spi_flash
+        nvs_flash
+        spiffs
+        esp_timer
+        driver
+        canopennode
+    INCLUDE_DIRS
+        "."
+)

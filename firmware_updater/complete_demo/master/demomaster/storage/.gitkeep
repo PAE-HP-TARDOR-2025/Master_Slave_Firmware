@@ -1,0 +1,3 @@
+# Placeholder for bye.bin firmware
+# This file will be replaced by the actual slave firmware binary
+# Build the slave first: cd ../slave && python build_slave_bins.py

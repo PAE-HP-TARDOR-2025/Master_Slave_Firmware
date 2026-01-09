@@ -1,0 +1,44 @@
+Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\Espressif\python_env\idf5.5_py3.10_env\Scripts\python.exe -DESP_PLATFORM=1 -DCCACHE_ENABLE=1 C:\Users\guill\OneDrive\Documents\firmware_updater\demo\demoslave
+-- Found Git: C:/Program Files/Git/cmd/git.exe (found version "2.37.3.windows.1")
+-- Minimal build - ON
+-- ccache will be used for faster recompilation
+-- The C compiler identification is GNU 14.2.0
+-- The CXX compiler identification is GNU 14.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: C:/Espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc.exe
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file C:/Users/guill/OneDrive/Documents/firmware_updater/demo/demoslave/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- Found Python3: C:/Espressif/python_env/idf5.5_py3.10_env/Scripts/python.exe (found version "3.10.7") found components: Interpreter
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS - Success
+-- USING O3
+-- App "demoslave" version: 8341509-dirty
+-- Adding linker script C:/Users/guill/OneDrive/Documents/firmware_updater/demo/demoslave/build-bye/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script C:/Users/guill/OneDrive/Documents/firmware_updater/demo/demoslave/build-bye/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libc-funcs.ld
+-- Adding linker script C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-reent-funcs.ld
+-- Adding linker script C:/Users/guill/esp/v5.5.1/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Components: app_update bootloader bootloader_support canopennode cxx driver efuse esp_app_format esp_bootloader_format esp_common esp_driver_ana_cmpr esp_driver_bitscrambler esp_driver_dac esp_driver_gpio esp_driver_gptimer esp_driver_i2c esp_driver_i2s esp_driver_ledc esp_driver_mcpwm esp_driver_parlio esp_driver_pcnt esp_driver_rmt esp_driver_sdio esp_driver_sdm esp_driver_sdmmc esp_driver_sdspi esp_driver_spi esp_driver_tsens esp_driver_twai esp_driver_uart esp_driver_usb_serial_jtag esp_hw_support esp_mm esp_partition esp_pm esp_ringbuf esp_rom esp_security esp_system esp_timer esptool_py freertos hal heap log main mbedtls newlib nvs_flash partition_table pthread sdmmc soc spi_flash xtensa
+-- Component paths: C:/Users/guill/esp/v5.5.1/esp-idf/components/app_update C:/Users/guill/esp/v5.5.1/esp-idf/components/bootloader C:/Users/guill/esp/v5.5.1/esp-idf/components/bootloader_support C:/Users/guill/OneDrive/Documents/firmware_updater/demo/demoslave/canopennode C:/Users/guill/esp/v5.5.1/esp-idf/components/cxx C:/Users/guill/esp/v5.5.1/esp-idf/components/driver C:/Users/guill/esp/v5.5.1/esp-idf/components/efuse C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_app_format C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_bootloader_format C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_common C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_ana_cmpr C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_bitscrambler C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_dac C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_gpio C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_gptimer C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_i2c C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_i2s C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_ledc C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_mcpwm C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_parlio C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_pcnt C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_rmt C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_sdio C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_sdm C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_sdmmc C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_sdspi C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_spi C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_tsens C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_twai C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_uart C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_driver_usb_serial_jtag C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_hw_support C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_mm C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_partition C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_pm C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_ringbuf C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_rom C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_security C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_system C:/Users/guill/esp/v5.5.1/esp-idf/components/esp_timer C:/Users/guill/esp/v5.5.1/esp-idf/components/esptool_py C:/Users/guill/esp/v5.5.1/esp-idf/components/freertos C:/Users/guill/esp/v5.5.1/esp-idf/components/hal C:/Users/guill/esp/v5.5.1/esp-idf/components/heap C:/Users/guill/esp/v5.5.1/esp-idf/components/log C:/Users/guill/OneDrive/Documents/firmware_updater/demo/demoslave/main C:/Users/guill/esp/v5.5.1/esp-idf/components/mbedtls C:/Users/guill/esp/v5.5.1/esp-idf/components/newlib C:/Users/guill/esp/v5.5.1/esp-idf/components/nvs_flash C:/Users/guill/esp/v5.5.1/esp-idf/components/partition_table C:/Users/guill/esp/v5.5.1/esp-idf/components/pthread C:/Users/guill/esp/v5.5.1/esp-idf/components/sdmmc C:/Users/guill/esp/v5.5.1/esp-idf/components/soc C:/Users/guill/esp/v5.5.1/esp-idf/components/spi_flash C:/Users/guill/esp/v5.5.1/esp-idf/components/xtensa
+-- Configuring done (11.5s)
+-- Generating done (0.8s)
+-- Build files have been written to: C:/Users/guill/OneDrive/Documents/firmware_updater/demo/demoslave/build-bye

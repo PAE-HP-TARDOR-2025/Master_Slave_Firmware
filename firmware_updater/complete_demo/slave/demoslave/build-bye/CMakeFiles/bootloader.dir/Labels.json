@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/guill/OneDrive/Documents/firmware_updater/librarywithfunctions/slave/demoslave/build-bye/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "C:/Users/guill/OneDrive/Documents/firmware_updater/librarywithfunctions/slave/demoslave/build-bye/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "C:/Users/guill/OneDrive/Documents/firmware_updater/librarywithfunctions/slave/demoslave/build-bye/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "C:/Users/guill/OneDrive/Documents/firmware_updater/librarywithfunctions/slave/demoslave/build-bye/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "C:/Users/guill/OneDrive/Documents/firmware_updater/librarywithfunctions/slave/demoslave/build-bye/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "C:/Users/guill/OneDrive/Documents/firmware_updater/librarywithfunctions/slave/demoslave/build-bye/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "C:/Users/guill/OneDrive/Documents/firmware_updater/librarywithfunctions/slave/demoslave/build-bye/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "C:/Users/guill/OneDrive/Documents/firmware_updater/librarywithfunctions/slave/demoslave/build-bye/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/guill/OneDrive/Documents/firmware_updater/librarywithfunctions/slave/demoslave/build-bye/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "C:/Users/guill/OneDrive/Documents/firmware_updater/librarywithfunctions/slave/demoslave/build-bye/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}

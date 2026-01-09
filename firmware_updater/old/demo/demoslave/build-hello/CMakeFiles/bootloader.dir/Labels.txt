@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+C:/Users/guill/OneDrive/Documents/firmware_updater/demo/demoslave/build-hello/CMakeFiles/bootloader
+C:/Users/guill/OneDrive/Documents/firmware_updater/demo/demoslave/build-hello/CMakeFiles/bootloader.rule
+C:/Users/guill/OneDrive/Documents/firmware_updater/demo/demoslave/build-hello/CMakeFiles/bootloader-complete.rule
+C:/Users/guill/OneDrive/Documents/firmware_updater/demo/demoslave/build-hello/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/Users/guill/OneDrive/Documents/firmware_updater/demo/demoslave/build-hello/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/Users/guill/OneDrive/Documents/firmware_updater/demo/demoslave/build-hello/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/Users/guill/OneDrive/Documents/firmware_updater/demo/demoslave/build-hello/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/Users/guill/OneDrive/Documents/firmware_updater/demo/demoslave/build-hello/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/Users/guill/OneDrive/Documents/firmware_updater/demo/demoslave/build-hello/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/Users/guill/OneDrive/Documents/firmware_updater/demo/demoslave/build-hello/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

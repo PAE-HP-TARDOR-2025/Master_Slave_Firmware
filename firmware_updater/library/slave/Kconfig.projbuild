@@ -1,0 +1,40 @@
+menu "Firmware Update Server Configuration"
+
+    config DEMO_SLAVE_NODE_ID
+        int "CANopen Node-ID"
+        default 10
+        range 1 127
+        help
+            CANopen node ID for the slave device.
+
+    config DEMO_SLAVE_CAN_BITRATE_KBPS
+        int "CAN bitrate (kbps)"
+        default 500
+        range 125 1000
+        help
+            CAN bus bitrate in kbps.
+
+    config DEMO_SLAVE_FW_VERSION
+        int "Firmware version number"
+        default 1
+        range 1 65535
+        help
+            Firmware version number (1-65535). Increment this when releasing
+            new firmware to ensure updates are applied even if CRC happens
+            to match. The version is stored in NVS after successful OTA.
+
+    config DEMO_SLAVE_MAX_CHUNK_BYTES
+        int "Max OTA chunk size"
+        default 256
+        range 64 1024
+        help
+            Maximum number of bytes per OTA data chunk.
+
+    config DEMO_SLAVE_MAX_IMAGE_BYTES
+        int "Max firmware image size"
+        default 524288
+        range 65536 2097152
+        help
+            Maximum firmware image size in bytes (default 512KB).
+
+endmenu
